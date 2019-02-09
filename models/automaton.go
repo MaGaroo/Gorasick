@@ -1,5 +1,5 @@
 package models
 
-type Automata struct {
-
+type Automaton struct {
+	entryNode *Node
 }
