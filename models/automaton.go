@@ -10,10 +10,14 @@ func NewAutomaton() *Automaton {
 	}
 }
 
-func (automata Automaton) AddPattern(pattern string) {
+func (automata *Automaton) AddPattern(pattern string) {
 	var currentNode *Node
 	currentNode = automata.entryNode
 	for _, char := range pattern {
-		currentNode = (*currentNode).GetChild(char, true)
+		currentNode = currentNode.GetChild(char, true)
 	}
+}
+
+func (automata *Automaton) Build() {
+
 }

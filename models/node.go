@@ -11,7 +11,7 @@ func NewNode() *Node {
 	return &Node{}
 }
 
-func (node Node) GetChild(b int32, createAnyway bool) *Node {
+func (node *Node) GetChild(b int32, createAnyway bool) *Node {
 	if createAnyway && node.children[b] == nil {
 		node.children[b] = NewNode()
 	}
